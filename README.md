@@ -1,4 +1,4 @@
-# Wonsub Cho's CV
+# Wonsub Cho
 
 ## Education
 
