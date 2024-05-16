@@ -31,6 +31,7 @@ Mar 2014 to Feb 2020
 
 ## Conference Presentations
 
+- Inelastic Dark Matter of $H_0$ tension and Detection Prospects, Oral Presentation, 2024 KPS Spring meeting
 - Cored Dark halos in the Cosmic neutrino Background, Oral Presentation, PPC 2023
 - Cored Dark halos in the Cosmic neutrino Background, Oral Presentation, 2023 KPS Spring meeting
 - Sterile neutrino dark matter with dipole interaction, Oral Presentation, 2021 KPS Fall meeting
