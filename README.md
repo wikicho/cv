@@ -25,6 +25,7 @@ Mar 2014 to Feb 2020
 
 ## Publications
 
+- *Stable dark matter from Pauli blocking in the degenerate fermion background with Quantum Field Theory*, Wonsub Cho, Ki-Young Choi, Junghoon Joh, Osamu Seto, arXiv:2407.08229 
 - *Cored Dark Matter halos in the Cosmic Neutrino Background*, Wonsub Cho, Ki-Young Choi, Hee Jung Kim, JCAP07(2023)013
 - *Sterile neutrino dark matter with dipole interaction*, Wonsub Cho, Ki-Young Choi, Osamu Seto, Phys. Rev. D 105.015016
 - *Searching for boosted dark matter mediated by a new gauge boson*, Wonsub Cho, Ki-Young Choi, and Seong Moon Yoo, Phys. Rev. D 102, 095010
