@@ -24,7 +24,7 @@ Mar 2014 to Feb 2020
 - **Early Universe:** First order phase transition, Inflation, Baryogenesis 
 
 ## Publications
-- *Reconciling Cosmological Tensions with Inelastic Dark Matter and Dark Radiation in a $U(1)_D$ Framework*, Wonsub Cho, Ki-Young Choi, Satyabrata Mahapatra, arXiv:2408.03004
+- *Reconciling Cosmological Tensions with Inelastic Dark Matter and Dark Radiation in a $U(1)_D$ Framework*, Wonsub Cho, Ki-Young Choi, Satyabrata Mahapatra, JCAP09(2024)065
 - *Stable dark matter from Pauli blocking in the degenerate fermion background with Quantum Field Theory*, Wonsub Cho, Ki-Young Choi, Junghoon Joh, Osamu Seto, arXiv:2407.08229 
 - *Cored Dark Matter halos in the Cosmic Neutrino Background*, Wonsub Cho, Ki-Young Choi, Hee Jung Kim, JCAP07(2023)013
 - *Sterile neutrino dark matter with dipole interaction*, Wonsub Cho, Ki-Young Choi, Osamu Seto, Phys. Rev. D 105.015016
