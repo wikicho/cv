@@ -21,7 +21,7 @@ Mar 2014 to Feb 2020
 ## Research Interest
 
 - **Dark Matter:** Sterile Neutrino DM, Relic Density Calculation
-- **Early Universe:** First order phase transition, Inflation, Baryogenesis 
+- **Early Universe:** First order phase transition, Baryogenesis 
 
 ## Publications
 - *Reconciling Cosmological Tensions with Inelastic Dark Matter and Dark Radiation in a $U(1)_D$ Framework*, Wonsub Cho, Ki-Young Choi, Satyabrata Mahapatra, JCAP09(2024)065
@@ -32,6 +32,7 @@ Mar 2014 to Feb 2020
 
 ## Conference Presentations
 
+- Reconciling Cosmological Tensions with Inelastic Dark Matter and Dark Radiation in a $U(1)_D$ Framework, 2025 KPS Spring meeting
 - Inelastic Dark Matter of $H_0$ tension and Detection Prospects, Oral Presentation, 2024 KPS Spring meeting
 - Cored Dark halos in the Cosmic neutrino Background, Oral Presentation, PPC 2023
 - Cored Dark halos in the Cosmic neutrino Background, Oral Presentation, 2023 KPS Spring meeting
@@ -41,6 +42,7 @@ Mar 2014 to Feb 2020
 
 ## TA Experiences
 
+- Quantum Field Theory (2025-2026)
 - Relativity, SKKU (2023 Fall)
 - KIAS Particle Physics Summer Camp 2023
 - Mathematical Physics, SKKU (2020 Fall-2022 Spring)
@@ -48,7 +50,7 @@ Mar 2014 to Feb 2020
 
 ## Awards and Scholarship
 
-- Outstanding Presentation Award, Korean Physical Society (2020 Fall, 2023 Spring)
+- Outstanding Presentation Award, Korean Physical Society (2020 Fall, 2023 Spring, 2025 Spring)
 - BK21 Innovation Research Fellowship (2021-2022)
 - Graduate Merit Scholarship, Department of Physics, SungKyunKwan University (2020-2024)
 - Excellence Award, undergraduate poster presentation, Korean Physical Society (2019)
