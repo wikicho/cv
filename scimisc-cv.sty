@@ -1,63 +1,133 @@
-% Quickly hacked together from .docx sample provided by Scimisc
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{scimisc-cv}[2026/08/13 Modern academic CV style]
+
 \RequirePackage{ifpdf,ifxetex,ifluatex}
 \ifpdf
   \RequirePackage{cmap}
   \RequirePackage[utf8]{inputenc}
   \RequirePackage[T1]{fontenc}
   \input{glyphtounicode}
-  \pdfglyphtounicode{f_f}{FB00}
-  \pdfglyphtounicode{f_f_i}{FB03}
-  \pdfglyphtounicode{f_f_l}{FB04}
-  \pdfglyphtounicode{f_i}{FB01}
+  \pdfglyphtounicode{f_f}{0066 0066}
+  \pdfglyphtounicode{f_f_i}{0066 0066 0069}
+  \pdfglyphtounicode{f_f_l}{0066 0066 006C}
+  \pdfglyphtounicode{f_i}{0066 0069}
+  \pdfglyphtounicode{f_l}{0066 006C}
   \pdfgentounicode=1
 \fi
 
-\RequirePackage{caladea}
-\RequirePackage{carlito}
+\RequirePackage[lining,proportional]{carlito}
 \renewcommand{\familydefault}{\sfdefault}
 
+\RequirePackage{xcolor}
 \RequirePackage{geometry}
+\RequirePackage{microtype}
+\DisableLigatures{encoding=*,family=*}
 \RequirePackage{parskip}
 \RequirePackage{enumitem}
-\RequirePackage{textcase}
+\RequirePackage{tabularx}
+\RequirePackage{array}
 \RequirePackage{xparse}
 \RequirePackage{needspace}
-\RequirePackage[compact,small,explicit]{titlesec}
+\RequirePackage{fancyhdr}
+\RequirePackage[explicit]{titlesec}
+
+\definecolor{cvtext}{HTML}{20262E}
+\definecolor{cvaccent}{HTML}{165A72}
+\definecolor{cvmuted}{HTML}{5B6773}
+\definecolor{cvline}{HTML}{D7DEE3}
+
+\geometry{a4paper,left=0.72in,right=0.72in,top=0.60in,bottom=0.52in}
+\color{cvtext}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.6pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{2em}
+\hbadness=10000
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
 
 \def\scimisc@cvname{}
+\def\scimisc@cvtagline{}
 \def\scimisc@cvpersonalinfo{}
-\def\cvinfosep{\hfill|\hfill{}}
 
 \newcommand{\cvname}[1]{\def\scimisc@cvname{#1}}
+\newcommand{\cvtagline}[1]{\def\scimisc@cvtagline{#1}}
 \newcommand{\cvpersonalinfo}[1]{\def\scimisc@cvpersonalinfo{#1}}
+\newcommand{\cvinfosep}{\hspace{0.7em}\textcolor{cvline}{\textbullet}\hspace{0.7em}}
 
-\newcommand{\cvtitlefamily}{\rmfamily}
-\newcommand{\cvnamefont}{\cvtitlefamily\huge\bfseries}
-\newcommand{\cvpersonalinfofont}{\normalsize}
+\newcommand{\cvnamefont}{\fontsize{28}{31}\selectfont\bfseries\color{cvtext}}
+\newcommand{\cvtaglinefont}{\fontsize{12.5}{15}\selectfont\bfseries\color{cvaccent}}
+\newcommand{\cvpersonalinfofont}{\small\color{cvmuted}}
 
 \newcommand{\makecvtitle}{%
-  \begin{center}
-      {\cvnamefont\MakeTextUppercase{\scimisc@cvname}\par}
-      \vskip4pt\hrule height 0.6pt \relax
-      {\cvpersonalinfofont\scimisc@cvpersonalinfo\par}
-  \end{center}\medskip
+  {\cvnamefont\scimisc@cvname\par}
+  \vspace{1pt}
+  {\cvtaglinefont\scimisc@cvtagline\par}
+  \vspace{7pt}
+  {\color{cvaccent}\rule{\textwidth}{1.1pt}\par}
+  \vspace{5pt}
+  {\cvpersonalinfofont\scimisc@cvpersonalinfo\par}
+  \vspace{7pt}
+  \thispagestyle{empty}
 }
+
+\titleformat{\section}
+  {\fontsize{12.5}{14}\selectfont\bfseries\color{cvaccent}}
+  {}
+  {0pt}
+  {#1}
+  [{\vspace{1.5pt}\color{cvline}\titlerule[0.55pt]}]
+\titlespacing*{\section}{0pt}{5.5pt}{3.5pt}
 
 \NewDocumentCommand{\cvsubsection}{m o o o}{%
-%   \vspace{\parskip}%
   \needspace{4\baselineskip}%
-  \textbf{#1}%
-  \IfValueT{#2}{\hfill\textbf{#2}}%
-  \IfValueT{#3}{\IfValueT{#4}{\\}}%
-  \IfValueT{#3}{\emph{#3}}%
-  \IfValueT{#4}{\hfill\emph{#4}}
-  \par\vspace{-\parskip}
+  \begin{tabularx}{\textwidth}{@{}Y>{\raggedleft\arraybackslash}p{1.35in}@{}}
+    \IfValueTF{#2}{\textbf{#2}}{\textbf{#1}} & \IfValueT{#4}{\small\textcolor{cvmuted}{#4}} \\
+    \IfValueT{#2}{\small\textcolor{cvaccent}{\textbf{#1}}\IfValueT{#3}{\textcolor{cvmuted}{\enspace\textbullet\enspace #3}}} &
+  \end{tabularx}%
+  \vspace{1pt}
 }
 
-\geometry{a4paper,margin=0.5in}
-\titleformat{\section}
-  {\bfseries\rmfamily\large}{\thesection}{0pt}{\MakeTextUppercase{#1}}[{\titlerule[0.6pt]}]
-\setlist{leftmargin=*,nosep}
+\NewDocumentCommand{\cvdetail}{m m}{%
+  {\small\textcolor{cvmuted}{\textbf{#1:} #2}\par}%
+}
 
-\pagestyle{empty}
+\NewDocumentCommand{\cvpublication}{m m m m m}{%
+  \item \textbf{#1}\par
+  {\small #2\par}
+  {\small\textcolor{cvmuted}{#3}\enspace\href{#4}{\textcolor{cvaccent}{\textbf{DOI}}}\enspace\textcolor{cvline}{\textbullet}\enspace\href{#5}{\textcolor{cvaccent}{\textbf{arXiv}}}\par}%
+}
+
+\NewDocumentCommand{\cvdateditem}{m m m}{%
+  \needspace{2.4\baselineskip}%
+  \begingroup
+  \hbadness=10000
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.72in}Y@{}}
+    \small\bfseries\textcolor{cvaccent}{#1} & \textbf{#2}\enspace #3
+  \end{tabularx}%
+  \endgroup
+  \vspace{-1pt}
+}
+
+\NewDocumentCommand{\cvskill}{m m}{%
+  \begingroup
+  \hbadness=10000
+  \begin{tabularx}{\textwidth}{@{}>{\bfseries}p{1.45in}Y@{}}
+    #1 & #2
+  \end{tabularx}%
+  \endgroup
+}
+
+\setlist[itemize]{leftmargin=1.15em,label=\textcolor{cvaccent}{\small\textbullet},itemsep=2pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+\setlist[enumerate]{leftmargin=1.45em,label=\textcolor{cvaccent}{\arabic*.},itemsep=6pt,topsep=2pt,parsep=0pt,partopsep=0pt}
+
+\fancypagestyle{cvcontinued}{%
+  \fancyhf{}
+  \fancyhead[L]{\footnotesize\bfseries\textcolor{cvmuted}{\scimisc@cvname}}
+  \fancyhead[R]{\footnotesize\textcolor{cvmuted}{Curriculum Vitae\enspace\textcolor{cvline}{|}\enspace\thepage}}
+  \renewcommand{\headrulewidth}{0.45pt}
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{cvline}\leaders\hrule height \headrulewidth\hfill}}
+}
+
+\pagestyle{cvcontinued}
+\setlength{\headheight}{22pt}
 \setcounter{secnumdepth}{0}
