@@ -6,7 +6,9 @@ $lualatex = 'lualatex -interaction=nonstopmode -halt-on-error -file-line-error -
 # Keep every generated build file in build/ and publish only the PDF.
 $out_dir = 'build';
 $aux_dir = 'build';
-$out2_dir = '../../output/pdf';
+# Use the application project's shared output when present; standalone clones
+# publish to the repository root instead.
+$out2_dir = (-d '../../job_list' && -d '../../output/pdf') ? '../../output/pdf' : '.';
 @out2_exts = ('pdf');
 
 # Preserve the established docs/CV PDF path used by application documents.
