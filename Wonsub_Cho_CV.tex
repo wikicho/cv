@@ -1,0 +1,159 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[a4paper,left=19mm,right=19mm,top=22mm,bottom=18mm,headheight=14pt,headsep=5mm,footskip=9mm]{geometry}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+\renewcommand{\familydefault}{\sfdefault}
+\definecolor{accent}{HTML}{155C73}
+\definecolor{muted}{HTML}{526170}
+\definecolor{rulecolor}{HTML}{D1DCE1}
+\definecolor{bodycolor}{HTML}{222830}
+\hypersetup{colorlinks=true,urlcolor=accent,linkcolor=accent,pdftitle={Wonsub Cho -- Curriculum Vitae},pdfauthor={Wonsub Cho},pdfsubject={Academic curriculum vitae}}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\setlength{\emergencystretch}{1em}
+\raggedbottom
+\titleformat{\section}{\large\bfseries\color{accent}}{}{0pt}{}[\vspace{2pt}{\color{rulecolor}\titlerule}]
+\titlespacing*{\section}{0pt}{12pt}{7pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\color{muted}Wonsub Cho}
+\fancyhead[R]{\small\color{muted}Curriculum Vitae}
+\fancyfoot[R]{\small\color{muted}\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{firstpage}{\fancyhf{}\fancyfoot[R]{\small\color{muted}\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+\newcommand{\education}[4]{%
+    \textbf{#1}\hfill{\small\color{muted}#2}\par
+    #3\par
+    {\small\color{muted}#4}\par\vspace{6pt}
+}
+\newcommand{\publication}[4]{%
+    \item {\raggedright\textbf{#1}\par}
+    {\small #2}\par
+    {\small #3\enspace\textcolor{muted}{\textperiodcentered}\enspace\href{https://arxiv.org/abs/#4}{arXiv:#4}}\par
+}
+\newcommand{\datedentry}[2]{%
+    \begin{minipage}[t]{29mm}\vspace{0pt}\raggedright\small\textcolor{muted}{#1}\end{minipage}%
+    \hspace{3mm}%
+    \begin{minipage}[t]{\dimexpr\linewidth-32mm\relax}\vspace{0pt}\raggedright #2\end{minipage}\par\vspace{3pt}
+}
+\newcommand{\awardentry}[2]{%
+    \begin{minipage}[t]{34mm}\vspace{0pt}\raggedright\small\textcolor{muted}{#1}\end{minipage}%
+    \hspace{3mm}%
+    \begin{minipage}[t]{\dimexpr\linewidth-37mm\relax}\vspace{0pt}\raggedright #2\end{minipage}\par\vspace{4pt}
+}
+\newcommand{\presentation}[4]{%
+    \begin{minipage}[t]{20mm}\vspace{0pt}\raggedright\small\textcolor{muted}{#1}\end{minipage}%
+    \hspace{3mm}%
+    \begin{minipage}[t]{\dimexpr\linewidth-23mm\relax}\vspace{0pt}\raggedright
+    {\small\textbf{#2}\enspace\textcolor{muted}{\textperiodcentered\ #3}\par}
+    ``#4''\par
+    \end{minipage}\par\vspace{5pt}
+}
+
+\begin{document}
+\fontsize{10.5}{13}\selectfont
+\color{bodycolor}
+\thispagestyle{firstpage}
+
+{\fontsize{27}{31}\selectfont\bfseries Wonsub Cho}\par
+\vspace{5pt}
+{\color{accent}Department of Physics, Sungkyunkwan University}\par
+\vspace{3pt}
+{\small\color{muted}Suwon, Republic of Korea}\par
+\vspace{6pt}
+{\small\href{mailto:wikicho1674@gmail.com}{wikicho1674@gmail.com}\enspace\textcolor{muted}{\textperiodcentered}\enspace\href{https://wikicho.github.io}{wikicho.github.io}\enspace\textcolor{muted}{\textperiodcentered}\enspace\href{https://inspirehep.net/authors/1821880}{INSPIRE}\enspace\textcolor{muted}{\textperiodcentered}\enspace\href{https://github.com/wikicho}{github.com/wikicho}}\par
+\vspace{2pt}
+
+\section*{Research Interests}
+\begin{itemize}[leftmargin=5mm,labelsep=2mm,itemsep=3pt,topsep=0pt,parsep=0pt]
+\item Dark matter in cosmology and particle physics
+\item Cosmological phase transitions, gravitational waves, and baryogenesis
+\end{itemize}
+
+\section*{Education}
+\education{Ph.D. Candidate in Physics}{Mar 2023\textendash Feb 2027 (expected)}{Sungkyunkwan University (SKKU)}{Theoretical Astroparticle Physics and Cosmology Group\\Advisor: Prof. Ki-Young Choi}
+\education{M.S. in Physics}{Aug 2020\textendash Aug 2022}{Sungkyunkwan University (SKKU)}{Thesis: \textit{Effect of Boosted Dark Matter by Cosmic Particles}}
+\education{B.S. in Physics}{Mar 2014\textendash Feb 2020}{Sungkyunkwan University (SKKU)}{Thesis: \textit{Searching for Boosted Dark Matter by High-Energy Neutrinos}}
+
+\section*{Visiting Research Experience}
+\textbf{Visiting Student}, CERN Theory Department \hfill{\small\color{muted}May 2026\textendash Present (expected end: Nov 2026)}\par
+Advisor: Jorinde van de Vis\par
+Research: Deviations from kinetic equilibrium in electroweak baryogenesis.\par
+{\small\color{muted}Selected through the CERN--Korea Collaboration (CKC) graduate student programme.}\par
+
+\begin{samepage}
+\section*{Awards and Fellowships}
+\awardentry{2026}{\textbf{CERN--Korea Collaboration (CKC) Graduate Student Programme}, selected for a research visit to CERN with support for living expenses and airfare.}
+\awardentry{2025}{\textbf{Encouragement Award for Graduate Research Presentation}, SKKU Physics Workshop.}
+\awardentry{2020, 2023, 2025}{\textbf{Outstanding Presentation Award}, Korean Physical Society.}
+\awardentry{2020\textendash 2024}{\textbf{Graduate Merit Scholarship}, Department of Physics, SKKU.}
+\awardentry{2021\textendash 2022}{\textbf{BK21 Innovation Research Fellowship}.}
+\awardentry{2019}{\textbf{Excellence Award for Undergraduate Poster Presentation}, Korean Physical Society.}
+\awardentry{2018}{\textbf{National Science and Technology Scholarship}, Korea Student Aid Foundation.}
+\end{samepage}
+
+\begin{samepage}
+\section*{Teaching Experience}
+\datedentry{2025\textendash 2026}{\textbf{Quantum Field Theory I and II}, Teaching Assistant, SKKU.}
+\datedentry{Fall 2024}{\textbf{Electromagnetism}, Teaching Assistant, SKKU.}
+\datedentry{Fall 2023}{\textbf{Relativity}, Teaching Assistant, SKKU.}
+\datedentry{2023}{\textbf{Particle Physics Summer Camp}, Teaching Assistant, KIAS.}
+\datedentry{2020, 2023}{\textbf{General Physics}, Teaching Assistant, SKKU.}
+\datedentry{2020\textendash 2022}{\textbf{Mathematical Physics}, Teaching Assistant, SKKU.}
+\end{samepage}
+
+\noindent\begin{minipage}{\linewidth}
+\section*{Skills and Languages}
+\begin{tabularx}{\linewidth}{@{}>{\bfseries}p{36mm}@{\hspace{3mm}}>{\raggedright\arraybackslash}X@{}}
+Scientific computing & Python, Mathematica \\
+Languages & Korean and English
+\end{tabularx}\par
+\end{minipage}\par
+
+\section*{Talks and Posters}
+\presentation{Nov 2026}{PT@Geneva}{Talk (scheduled)}{Nanohertz gravitational waves and asymmetric dark matter from a supercooled dark sector phase transition}
+\presentation{Sep 2026}{DESY Theory Workshop 2026}{Talk}{Nanohertz gravitational waves and dark matter from a classically conformal dark sector}
+\presentation{Dec 2025}{IBS Dark Matter Axion Group Seminar}{Talk}{Reconciling cosmological tensions with inelastic dark matter and radiation in a $\mathrm{U}(1)_D$ framework}
+\presentation{Nov 2025}{SKKU Physics Workshop}{Poster}{Reconciling cosmological tensions with inelastic dark matter and dark radiation in a $\mathrm{U}(1)_D$ framework}
+\presentation{Aug 2025}{29th International Summer Institute on Phenomenology of Elementary Particle Physics and Cosmology (SI 2025)}{Poster}{Reconciling cosmological tensions with inelastic dark matter and dark radiation}
+\presentation{Apr 2025}{7th CUBES Workshop}{Talk}{Reconciling cosmological tensions with inelastic dark matter and dark radiation in a $\mathrm{U}(1)_D$ framework}
+\presentation{Apr 2025}{Spring Meeting of the Korean Physical Society}{Talk}{Reconciling cosmological tensions with inelastic dark matter and dark radiation}
+\presentation{Jul 2024}{IBS CTPU-CGA 2024 Summer School and Workshop for Particle Physics and Cosmology in Korea}{Talk}{Freeze-in inelastic Dirac dark matter and $H_0$ tension}
+\presentation{Apr 2024}{6th CUBES Workshop}{Talk}{Freeze-in inelastic dark matter, $H_0$ tension and detection prospects}
+\presentation{Apr 2024}{Spring Meeting of the Korean Physical Society}{Talk}{Inelastic dark matter, the $H_0$ tension, and detection prospects}
+\presentation{Jul 2023}{IBS CTPU-CGA 2023 Summer Workshop and School on Particle Physics in Korea}{Talk}{Cored dark matter halos in the cosmic neutrino background}
+\presentation{Jun 2023}{XVI International Conference on Interconnections between Particle Physics and Cosmology (PPC 2023)}{Talk}{Cored dark matter halos in the cosmic neutrino background}
+\presentation{Apr 2023}{5th CUBES Workshop}{Talk}{Cored dark halo in the cosmic neutrino background}
+\presentation{Apr 2023}{Spring Meeting of the Korean Physical Society}{Talk}{Cored dark matter halos in the cosmic neutrino background}
+\presentation{Nov 2021}{The Origin and Evolution of the Universe (APCTP)}{Talk}{Sterile neutrino dark matter with dipole interaction}
+\presentation{Oct 2021}{Fall Meeting of the Korean Physical Society}{Talk}{Sterile neutrino dark matter with dipole interaction}
+\presentation{Nov 2020}{Fall Meeting of the Korean Physical Society}{Talk}{Searching for boosted dark matter mediated by a new gauge boson}
+\presentation{Oct 2019}{Fall Meeting of the Korean Physical Society}{Poster}{Searching for boosted dark matter by cosmic rays}
+
+\noindent\begin{minipage}{\linewidth}
+\section*{Publications}
+\begin{enumerate}[label=\textcolor{accent}{\arabic*.},leftmargin=5mm,labelsep=2mm,itemsep=8pt,topsep=0pt,parsep=0pt]
+\publication{Stable dark matter from Pauli blocking in the degenerate fermion background \mbox{with quantum field theory}}{Wonsub Cho, Ki-Young Choi, Junghoon Joh, and Osamu Seto}{\href{https://doi.org/10.1016/j.dark.2025.101978}{\textit{Physics of the Dark Universe} 49 (2025) 101978}}{2407.08229}
+\publication{Reconciling cosmological tensions with inelastic dark matter and dark radiation in a $\mathrm{U}(1)_D$ framework}{Wonsub Cho, Ki-Young Choi, and Satyabrata Mahapatra}{\href{https://doi.org/10.1088/1475-7516/2024/09/065}{\textit{Journal of Cosmology and Astroparticle Physics} 09 (2024) 065}}{2408.03004}
+\publication{Cored dark matter halos in the cosmic neutrino background}{Wonsub Cho, Ki-Young Choi, and Hee Jung Kim}{\href{https://doi.org/10.1088/1475-7516/2023/07/013}{\textit{Journal of Cosmology and Astroparticle Physics} 07 (2023) 013}}{2204.01431}
+\publication{Sterile neutrino dark matter with dipole interaction}{Wonsub Cho, Ki-Young Choi, and Osamu Seto}{\href{https://doi.org/10.1103/PhysRevD.105.015016}{\textit{Physical Review D} 105 (2022) 015016}}{2108.07569}
+\publication{Searching for boosted dark matter mediated by a new gauge boson}{Wonsub Cho, Ki-Young Choi, and Seong Moon Yoo}{\href{https://doi.org/10.1103/PhysRevD.102.095010}{\textit{Physical Review D} 102 (2020) 095010}}{2007.04555}
+\end{enumerate}
+\end{minipage}\par
+
+\end{document}
